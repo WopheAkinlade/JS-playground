@@ -1,15 +1,41 @@
 body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
     gap: 100px;
+    height: 80vh;
+}
+
+.button-container{
+    width: 100%;
+    gap: 200px;
 }
 
 button{
     background: transparent;
     border-radius: 20px;
-    border: 3px solid #F3F3F3;
-    font-size: 50px;
-    width: 100px;
+    border: 3px solid #e3e3e3;
+    font-size: 30px;
+    width: 200px;
     height: 80px;
+    transition: 200ms ease-in;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+button:hover{
+    background-color: #f3f3f3;
+    cursor: pointer;
+    color: brown;
+    box-shadow: 0px 0px 10px #000;
+}
+
+.textbox{
+    border-radius: 20px;
+    border: 3px solid #e3e3e3;
+    width: 500px;
+    height: 150px;
+}
+
+body, .button-container, .textbox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
