@@ -1,8 +1,15 @@
+// Initialising interfaces because why not
 interface User{
   id: number;
   name: string;
 }
 
+interface Subject{
+  studentId: number;
+  subjects: string[];
+}
+
+// Declaring variables with the interface types I created
 const students: User[] = [
   { id: 1, name: "Blake" },
   { id: 2, name: "James" },
@@ -10,13 +17,14 @@ const students: User[] = [
   { id: 4, name: "John" },
 ];
 
-const subjects = [
+const subjects: Subject[] = [
   { studentId: 1, subjects: ["Biology", "Physics", "Chemistry"] },
   { studentId: 2, subjects: ["Commerce", "Book-keeping"] },
   { studentId: 3, subjects: ["CCP", "CRK", "Literature"] },
   { studentId: 4, subjects: ["CCP", "CRK", "Literature"] },
 ];
 
+// 
 const getData = async () => {
   try {
     const student = await findStudent("John");
