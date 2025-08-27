@@ -3,19 +3,28 @@ const menuBtn = document.getElementById("menu");
 const menu = document.getElementById("menu__list");
 const closeMenuBtn = document.getElementById("menu__close");
 
+
+// Function used to close the menu
 const closeMenu = () => {
   menu.classList.remove("menu__list");
   menuBtn.classList.remove("closed");
   html.removeEventListener("click", closeMenuOnBodyClick);
 };
 
-// Function that the opens the menu
+// Function that opens the menu
 menuBtn.addEventListener("click", () => {
   menu.classList.add("menu__list");
   menuBtn.classList.add("closed");
   menu.addEventListener("click", closeMenu);
   html.addEventListener("click", closeMenuOnBodyClick);
 });
+
+/**
+ * Function for closing the menu when any oteher part of the html dom is clicked asides the menu
+ * @param {Event} event - any way the user interacts with the webpage 
+ */
+
+
 
 function closeMenuOnBodyClick(event) {
   // get the event path
