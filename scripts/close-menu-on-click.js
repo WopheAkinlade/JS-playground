@@ -23,9 +23,6 @@ menuBtn.addEventListener("click", () => {
  * Function for closing the menu when any oteher part of the html dom is clicked asides the menu
  * @param {Event} event - any way the user interacts with the webpage 
  */
-
-
-
 function closeMenuOnBodyClick(event) {
   // get the event path
   const path = event.composedPath();
